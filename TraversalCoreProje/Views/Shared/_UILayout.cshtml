@@ -4,25 +4,29 @@
 }
 
 
+
+
 <!doctype html>
-<html lang="zxx">
+    <html lang="zxx">
 
 
-@await Html.PartialAsync("/Views/LayoutPartial/_HeaderPartial.cshtml")
+    @await Html.PartialAsync("/Views/LayoutPartial/_HeaderPartial.cshtml")
 
 
-<body>
+    <body>
 
-    @await Html.PartialAsync("/Views/LayoutPartial/_NavBarPartial.cshtml")
-    @RenderBody()
-
-
-    @await Html.PartialAsync("/Views/LayoutPartial/_FooterPartial.cshtml")
-    
-    @await Html.PartialAsync("/Views/LayoutPartial/_ScriptsPartial.cshtml")
+        @await Html.PartialAsync("/Views/LayoutPartial/_NavBarPartial.cshtml")
+        @RenderBody()
 
 
-   
-</body>
+        @await Html.PartialAsync("/Views/LayoutPartial/_FooterPartial.cshtml")
 
-</html>
+        @await Html.PartialAsync("/Views/LayoutPartial/_ScriptsPartial.cshtml")
+
+
+
+    </body>
+
+    </html>
+ 
+  
