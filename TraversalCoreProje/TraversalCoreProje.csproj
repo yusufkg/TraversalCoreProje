@@ -84,8 +84,4 @@
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Member\Data\" />
-  </ItemGroup>
-
 </Project>
