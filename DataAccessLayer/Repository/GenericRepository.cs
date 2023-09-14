@@ -14,6 +14,8 @@ namespace DataAccessLayer.Repository
         public void Delete(T t)
         {
             using var c = new Context();
+            c.Remove(t);
+            c.SaveChanges();
         }
 
         public T GetByID(int id)
@@ -46,6 +48,7 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             c.Update(t);
+            c.SaveChanges();
         }
     }
 
