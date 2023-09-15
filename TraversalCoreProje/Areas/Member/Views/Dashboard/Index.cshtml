@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
+
 <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg bg-transparent shadow-none position-absolute px-4 w-100 z-index-2">
@@ -19,23 +20,23 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid">
-        <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('~/soft-ui-dashboard/assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
+        <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('/soft-ui-dashboard/assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
             <span class="mask bg-gradient-primary opacity-6"></span>
         </div>
         <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
             <div class="row gx-4">
                 <div class="col-auto">
                     <div class="avatar avatar-xl position-relative">
-                        <img src="~/soft-ui-dashboard/assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                        <img src="~/userimages/@ViewBag.userImage" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
                     </div>
                 </div>
                 <div class="col-auto my-auto">
                     <div class="h-100">
                         <h5 class="mb-1">
-                            Alec Thompson
+                            @ViewBag.userName
                         </h5>
                         <p class="mb-0 font-weight-bold text-sm">
-                            CEO / Co-Founder
+                            Traversal / Star Üye
                         </p>
                     </div>
                 </div>
@@ -58,7 +59,7 @@
                                             </g>
                                         </g>
                                     </svg>
-                                    <span class="ms-1">Siteye Git</span>
+                                    <span class="ms-1">Siteye Dön</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -109,18 +110,12 @@
     </div>
     <div class="container-fluid py-4">
         <div class="row">
-
-
-
+           
             @await Component.InvokeAsync("_PlatformSetting")
-
 
             @await Component.InvokeAsync("_ProfileInformation")
 
-
             @await Component.InvokeAsync("_GuideList")
-
-
 
             <div class="col-12 mt-4">
                 <div class="card mb-4">
@@ -256,5 +251,5 @@
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 </div>

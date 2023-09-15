@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
-    public interface IAbout2Dal : IGenericDal<About2>
+    public interface IAbout2Dal: IGenericDal<About2>
     {
     }
 }

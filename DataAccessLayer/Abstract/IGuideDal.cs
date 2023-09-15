@@ -2,12 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
-    public interface IGuideDal:IGenericDal<Guide>
+    public interface IGuideDal: IGenericDal<Guide>
     {
+       
+
     }
 }

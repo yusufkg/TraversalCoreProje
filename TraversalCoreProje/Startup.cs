@@ -1,4 +1,8 @@
-using DataAccessLayer.Concrete;
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccesslayer.Abstract;
+using DataAccesslayer.Concrete;
+using DataAccesslayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -8,11 +12,14 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Primitives;
+using BusinessLayer.Container;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TraversalCoreProje.Models;
+using Extensions = BusinessLayer.Container.Extensions;
 
 namespace TraversalCoreProje
 {
@@ -29,17 +36,22 @@ namespace TraversalCoreProje
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>();
-            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>().AddEntityFrameworkStores<Context>();
+            services.AddIdentity<AppUser, AppRole>
+             ().AddEntityFrameworkStores<Context>
+             ().AddErrorDescriber<CustomIdentityValidator>
+             ().AddEntityFrameworkStores<Context>();
+
+            services.ContainerDependencies();
+
             services.AddControllersWithViews();
 
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
-                .RequireAuthenticatedUser()
-                .Build();
-                config.Filters.Add(new AuthorizeFilter(policy));
+                    .RequireAuthenticatedUser()
+                    .Build();
+                    config.Filters.Add(new AuthorizeFilter(policy));
             });
-
             services.AddMvc();
         }
 
@@ -56,11 +68,13 @@ namespace TraversalCoreProje
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404", "?code={0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseAuthentication();
-            app.UseRouting();
 
+            app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -69,6 +83,7 @@ namespace TraversalCoreProje
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

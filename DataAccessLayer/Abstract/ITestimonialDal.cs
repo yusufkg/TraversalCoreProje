@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
-    public interface ITestimonialDal : IGenericDal<Testimonial>
+    public interface ITestimonialDal: IGenericDal<Testimonial>
     {
     }
 }

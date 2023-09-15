@@ -1,6 +1,6 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
-using EntityLayer;
+using DataAccesslayer.Abstract;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +15,9 @@ namespace BusinessLayer.Concrete
 
         public AboutManager(IAboutDal aboutDal)
         {
-            _aboutDal = aboutDal;
+           _aboutDal = aboutDal;
         }
+
         public void TAdd(About t)
         {
             _aboutDal.Insert(t);
@@ -32,14 +33,14 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<About> TGetlist()
+        public List<About> TGetList()
         {
-            return _aboutDal.Getlist(); 
+            return _aboutDal.GetList();
         }
 
         public void TUpdate(About t)
         {
-            _aboutDal.Update(t);
+             _aboutDal.Update(t);
         }
     }
 }

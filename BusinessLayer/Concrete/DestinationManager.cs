@@ -1,6 +1,6 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
-using EntityLayer;
+using DataAccesslayer.Abstract;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace BusinessLayer.Concrete
     public class DestinationManager:IDestinationService
     {
         IDestinationDal _destinationDal;
-
+        
         public DestinationManager(IDestinationDal destinationDal)
         {
             _destinationDal = destinationDal;
@@ -30,13 +30,12 @@ namespace BusinessLayer.Concrete
 
         public Destination TGetByID(int id)
         {
-
             return _destinationDal.GetByID(id);
         }
 
-        public List<Destination> TGetlist()
+        public List<Destination> TGetList()
         {
-            return _destinationDal.Getlist();
+           return _destinationDal.GetList();
         }
 
         public void TUpdate(Destination t)

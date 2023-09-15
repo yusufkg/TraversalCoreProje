@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TraversalCoreProje.Controllers
 {
@@ -16,17 +12,17 @@ namespace TraversalCoreProje.Controllers
         {
             return PartialView();
         }
+
         public PartialViewResult PartialSideBar()
         {
             return PartialView();
+        }
 
-        }  
-        
-        public PartialViewResult PartialNavbar()
+        public PartialViewResult PartialNavBar()
         {
             return PartialView();
-
         }
+
         public PartialViewResult PartialFooter()
         {
             return PartialView();
@@ -35,7 +31,6 @@ namespace TraversalCoreProje.Controllers
         public PartialViewResult PartialScript()
         {
             return PartialView();
-
         }
     }
 }

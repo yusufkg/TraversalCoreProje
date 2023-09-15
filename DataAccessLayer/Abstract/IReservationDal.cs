@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
     public interface IReservationDal : IGenericDal<Reservation>
     {
         List<Reservation> GetListWithReservationByWaitApproval(int id);
         List<Reservation> GetListWithReservationByAccepted(int id);
         List<Reservation> GetListWithReservationByPrevious(int id);
+        
     }
 }

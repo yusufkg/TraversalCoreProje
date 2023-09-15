@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
-    public interface ISubAboutDal : IGenericDal<SubAbout>
+    public interface ISubAboutDal: IGenericDal<SubAbout>
     {
     }
 }

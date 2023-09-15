@@ -1,5 +1,5 @@
-﻿using DataAccessLayer.Abstract;
-using DataAccessLayer.Repository;
+﻿using DataAccesslayer.Abstract;
+using DataAccesslayer.Repository;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Entityframework
+namespace DataAccesslayer.EntityFramework
 {
     public class EfContactDal : GenericRepository<Contact>, IContactDal
     {

@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
+using DataAccesslayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -33,9 +33,9 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Feature> TGetlist()
+        public List<Feature> TGetList()
         {
-            return _featureDal.Getlist();
+            return _featureDal.GetList();
         }
 
         public void TUpdate(Feature t)

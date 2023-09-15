@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
+using DataAccesslayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class TestimonialManager:ITestimonialService
+    public class TestimonialManager: ITestimonialService
     {
         ITestimonialDal _testimonialDal;
 
@@ -33,9 +33,9 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Testimonial> TGetlist()
+        public List<Testimonial> TGetList()
         {
-            return _testimonialDal.Getlist();
+            return _testimonialDal.GetList();
         }
 
         public void TUpdate(Testimonial t)

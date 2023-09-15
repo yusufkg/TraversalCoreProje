@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace DataAccesslayer.Abstract
 {
-    public interface ICommentDal : IGenericDal<Comment>
+    public interface ICommentDal: IGenericDal<Comment>
     {
+        public List<Comment> GetListCommentWithDestination();
     }
 }

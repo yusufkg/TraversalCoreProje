@@ -1,13 +1,11 @@
 ﻿@using EntityLayer.Concrete
 @model List<Reservation>
-
 @{
     ViewData["Title"] = "MyCurrentReservation";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-
-<h1>Aktif Rezervasyonlar</h1>
+<h1>Aktif Rezervasyonlarım</h1>
 
 <table class="table table-bordered">
     <tr>
@@ -26,6 +24,5 @@
             <td>@item.ReservationDate</td>
             <td>@item.Status</td>
         </tr>
-
     }
 </table>

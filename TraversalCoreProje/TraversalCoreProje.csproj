@@ -1,71 +1,218 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
-    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
-    <None Include="wwwroot\sneat-1.0.0\.github\workflows\issue-staler.yml" />
-    <None Include="wwwroot\Traversal-Starter\about.html" />
-    <None Include="wwwroot\Traversal-Starter\assets\css\style-starter.css" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\fontawesome-webfont.eot" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\fontawesome-webfont.ttf" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\fontawesome-webfont.woff" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\fontawesome-webfont.woff2" />
-    <None Include="wwwroot\Traversal-Starter\assets\fonts\FontAwesome.otf" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\banner1.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\banner2.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\banner3.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\banner4.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\c1.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\c2.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\c3.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\c4.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\close.png" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\date.png" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\dots.png" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\down.png" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g1.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g10.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g2.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g3.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g4.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g5.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g6.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g7.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g8.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\g9.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\img-sprite.png" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\team1.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\team2.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\team3.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\images\team4.jpg" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\all.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\app.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\bootstrap.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\jquery-3.3.1.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\jquery.countup.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\jquery.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\jquery.waypoints.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\jquery.zoomslider.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\lightbox-plus-jquery.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\main.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\modernizr-2.6.2.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\owl.carousel.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\popper.min.js" />
-    <None Include="wwwroot\Traversal-Starter\assets\js\theme-change.js" />
-    <None Include="wwwroot\Traversal-Starter\contact.html" />
-    <None Include="wwwroot\Traversal-Starter\index.html" />
-    <None Include="wwwroot\Traversal-Starter\services.html" />
-    <None Include="wwwroot\Traversal-Starter\starter-license-W3Layouts.txt" />
+    <Compile Remove="Views\Shared\Components2\**" />
+    <Content Remove="Views\Shared\Components2\**" />
+    <EmbeddedResource Remove="Views\Shared\Components2\**" />
+    <None Remove="Views\Shared\Components2\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.7.1" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <Compile Remove="Views\Shared\_AdminDashboardLayout.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\AdminDashboardLayout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\NewFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Destination\AddDestination.cshtml" />
+    <None Include="Areas\Admin\Views\Destination\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Destination\UpdateDestination.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
+    <None Include="Views\Shared\Components\_AdminDashboardHeader\Default.cshtml" />
+    <None Include="Views\Shared\Components\_AdminGuideList\Default.cshtml" />
+    <None Include="Views\Shared\Components\_Cards1Statistic\Default.cshtml" />
+    <None Include="Views\Shared\Components\_Cards2Statistics\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DashboardBanner\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DestinationStatistic2\Default.cshtml" />
+    <None Include="Views\Shared\Components\_DestinationStatistic\Default.cshtml" />
+    <None Include="Views\Shared\Components\_TotalRevenue\Default.cshtml" />
+    <None Include="wwwroot\simple-404-template-master\assets\images\404.svg" />
+    <None Include="wwwroot\simple-404-template-master\LICENSE" />
+    <None Include="wwwroot\simple-404-template-master\README.md" />
+    <None Include="wwwroot\sneat-1.0.0\.browserslistrc" />
+    <None Include="wwwroot\sneat-1.0.0\.eslintignore" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\issue-staler.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.gitignore" />
+    <None Include="wwwroot\sneat-1.0.0\.prettierignore" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\config.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\dashboards-analytics.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\extended-ui-perfect-scrollbar.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\form-basic-inputs.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\main.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\pages-account-settings-account.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\ui-modals.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\ui-popover.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\js\ui-toasts.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\fonts\boxicons\boxicons.svg" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\fonts\boxicons\boxicons.woff2" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\js\bootstrap.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\js\helpers.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\js\menu.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\apex-charts\apexcharts.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\highlight\highlight.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\jquery\jquery.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\masonry\masonry.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <None Include="wwwroot\sneat-1.0.0\assets\vendor\libs\popper\popper.js" />
+    <None Include="wwwroot\sneat-1.0.0\build-config.js" />
+    <None Include="wwwroot\sneat-1.0.0\CHANGELOG.md" />
+    <None Include="wwwroot\sneat-1.0.0\fonts\boxicons.scss" />
+    <None Include="wwwroot\sneat-1.0.0\gulpfile.js" />
+    <None Include="wwwroot\sneat-1.0.0\js\bootstrap.js" />
+    <None Include="wwwroot\sneat-1.0.0\js\helpers.js" />
+    <None Include="wwwroot\sneat-1.0.0\js\menu.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\apex-charts\apex-charts.scss" />
+    <None Include="wwwroot\sneat-1.0.0\libs\apex-charts\apexcharts.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\highlight\highlight-github.scss" />
+    <None Include="wwwroot\sneat-1.0.0\libs\highlight\highlight.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\highlight\highlight.scss" />
+    <None Include="wwwroot\sneat-1.0.0\libs\jquery\jquery.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\masonry\masonry.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <None Include="wwwroot\sneat-1.0.0\libs\perfect-scrollbar\perfect-scrollbar.scss" />
+    <None Include="wwwroot\sneat-1.0.0\libs\popper\popper.js" />
+    <None Include="wwwroot\sneat-1.0.0\LICENSE.md" />
+    <None Include="wwwroot\sneat-1.0.0\README.md" />
+    <None Include="wwwroot\sneat-1.0.0\scss\core.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\pages\page-account-settings.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\pages\page-auth.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\pages\page-icons.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\pages\page-misc.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\theme-default.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_floating-labels.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_form-control.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_form-range.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_form-select.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_input-group.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_labels.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\forms\_validation.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_alert.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_badge.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_buttons.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_caret.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_dropdown.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_forms.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_list-group.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_misc.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_navs.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_pagination.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_progress.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_table-variants.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\mixins\_toasts.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_accordion.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_alert.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_badge.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_breadcrumb.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_button-group.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_buttons.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_card.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_carousel.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_close.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_dropdown.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_forms.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_functions.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_include.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_list-group.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_mixins.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_modal.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_nav.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_navbar.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_offcanvas.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_pagination.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_popover.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_progress.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_reboot.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_root.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_spinners.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_tables.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_toasts.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_tooltip.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_type.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_utilities-ltr.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_utilities.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap-extended\_variables.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_bootstrap.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_colors.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_app-brand.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_avatar.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_footer.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_menu.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_misc.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_navbar.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\mixins\_text-divider.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_app-brand.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_avatar.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_base.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_common.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_footer.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_include.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_layout.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_menu.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_mixins.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_text-divider.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_components\_variables.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_custom-variables\_bootstrap-extended.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_custom-variables\_components.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_custom-variables\_libs.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_custom-variables\_pages.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_custom-variables\_support.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_theme\_common.scss" />
+    <None Include="wwwroot\sneat-1.0.0\scss\_theme\_theme.scss" />
+    <None Include="wwwroot\sneat-1.0.0\tasks\build.js" />
+    <None Include="wwwroot\sneat-1.0.0\tasks\prod.js" />
+    <None Include="wwwroot\sneat-1.0.0\webpack.config.js" />
+    <None Include="wwwroot\sneat-1.0.0\yarn.lock" />
+    <None Include="wwwroot\Traversal-Liberty\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Traversal-Liberty\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\all.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\app.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\jquery.countup.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\jquery.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\jquery.zoomslider.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\lightbox-plus-jquery.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\main.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\modernizr-2.6.2.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\owl.carousel.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\popper.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\assets\js\theme-change.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\all.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\app.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\jquery.countup.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\jquery.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\jquery.zoomslider.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\lightbox-plus-jquery.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\main.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\modernizr-2.6.2.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\owl.carousel.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\popper.min.js" />
+    <None Include="wwwroot\Traversal-Liberty\Traversal-Liberty\assets\js\theme-change.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
@@ -83,62 +230,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\DataAccesslayer\DataAccesslayer.csproj" />
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Member\Data\" />
-    <Folder Include="wwwroot\userimages\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Views\Shared\Components\_CommentList\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_DashboardBanner\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_Feature\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_GuideList\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_PlatformSetting\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_PopularDestinations\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_ProfileInformation\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_SliderPartial\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_Statistics\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_SubAbout\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-    <Content Update="Views\Shared\Components\_Testimonial\Default.cshtml">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
   </ItemGroup>
 
 </Project>

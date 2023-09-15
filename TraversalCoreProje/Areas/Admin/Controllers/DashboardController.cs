@@ -1,14 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace TraversalCoreProje.Areas.Admin.Controllers
+namespace DotNetCoreTraversal.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
+    [Route("Admin/[controller]/[action]/{id?}")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
+using DataAccesslayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace BusinessLayer.Concrete
 
         public SubAboutManager(ISubAboutDal subAboutDal)
         {
-            _subAboutDal = subAboutDal;
+             _subAboutDal = subAboutDal;
         }
 
         public void TAdd(SubAbout t)
@@ -33,14 +33,14 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<SubAbout> TGetlist()
+        public List<SubAbout> TGetList()
         {
-            return _subAboutDal.Getlist();
+            return _subAboutDal.GetList();
         }
 
         public void TUpdate(SubAbout t)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }

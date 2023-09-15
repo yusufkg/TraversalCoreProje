@@ -15,5 +15,6 @@ namespace EntityLayer.Concrete
         public string Comment { get; set; }
         public string ClientImage { get; set; }
         public bool Status { get; set; }
+
     }
 }

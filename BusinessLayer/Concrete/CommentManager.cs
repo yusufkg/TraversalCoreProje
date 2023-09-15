@@ -1,5 +1,5 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
+using DataAccesslayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -25,22 +25,27 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Comment t)
         {
-            throw new NotImplementedException();
+            _commentDal.Delete(t);
         }
 
         public Comment TGetByID(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Comment> TGetlist()
-        {
-            throw new NotImplementedException();
+            return _commentDal.GetByID(id);
         }
 
         public List<Comment> TGetDestinationById(int id)
         {
             return _commentDal.GetListByFilter(x => x.DestinationID == id);
+        }
+
+        public List<Comment> TGetList()
+        {
+            return _commentDal.GetList();
+        }
+
+        public List<Comment> TGetListCommentWithDestination()
+        {
+            return _commentDal.GetListCommentWithDestination();
         }
 
         public void TUpdate(Comment t)
