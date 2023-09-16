@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 namespace TraversalCoreProje.Areas.Member.Controllers
 {
     [Area("Member")]
+
     public class DashboardController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
