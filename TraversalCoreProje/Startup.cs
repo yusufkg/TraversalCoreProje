@@ -41,9 +41,9 @@ namespace TraversalCoreProje
              ().AddErrorDescriber<CustomIdentityValidator>
              ().AddEntityFrameworkStores<Context>();
 
-            services.ContainerDependencies();
 
-            services.AddControllersWithViews();
+            services.ContainerDependencies();
+             services.AddControllersWithViews();
 
             services.AddMvc(config =>
             {
