@@ -24,8 +24,10 @@ namespace BusinessLayer.Container
             services.AddScoped<IDestinationService, DestinationManager>();
             services.AddScoped<IDestinationDal, EfDestinationDal>();
 
+            services.AddScoped<IReservationService, ReservartionManager>();
+            services.AddScoped<IReservationDal, EfReservationDal>();
 
-            
+
         }
     }
 }
