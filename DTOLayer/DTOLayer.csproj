@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="DTOs\ContactDTOs\" />
-    <Folder Include="DTOs\NewFolder\" />
   </ItemGroup>
 
 </Project>

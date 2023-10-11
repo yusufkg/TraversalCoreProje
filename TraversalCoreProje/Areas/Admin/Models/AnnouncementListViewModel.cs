@@ -1,8 +1,11 @@
-﻿namespace DotNetCoreTraversal.Areas.Admin.Models
+﻿
+
+
+namespace DotNetCoreTraversal.Areas.Admin.Models
 {
     public class AnnouncementListViewModel
     {
-        public int AnnouncementID { get; set; }
+        public int ID { get; set; }
 
         public string Title { get; set; }
 

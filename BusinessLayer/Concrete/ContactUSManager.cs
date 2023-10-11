@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class ContactUSManager : IContactUsService
+    public class ContactUsManager : IContactUsService
     {
         IContactUsDal _contactUsDal;
 
-        public ContactUSManager(IContactUsDal contactUsDal)
+        public ContactUsManager(IContactUsDal contactUsDal)
         {
             _contactUsDal = contactUsDal;
         }
@@ -38,11 +38,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<ContactUs> TGetLisContactUsByTrue()
-        {
-            return _contactUsDal.GetLisContactUsByTrue();
-        }
-
+       
         public List<ContactUs> TGetList()
         {
             return _contactUsDal.GetList();
@@ -51,6 +47,11 @@ namespace BusinessLayer.Concrete
         public List<ContactUs> TGetListContactUsByFalse()
         {
             return _contactUsDal.GetListContactUsByFalse();
+        }
+
+        public List<ContactUs> TGetListContactUsByTrue()
+        {
+            return _contactUsDal.GetListContactUsByTrue();
         }
 
         public void TUpdate(ContactUs t)

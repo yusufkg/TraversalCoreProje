@@ -17,7 +17,7 @@ namespace DataAccesslayer.EntityFramework
             throw new NotImplementedException();
         }
 
-        public List<ContactUs> GetLisContactUsByTrue()
+        public List<ContactUs> GetListContactUsByTrue()
         {
             using (var context = new Context())
             {

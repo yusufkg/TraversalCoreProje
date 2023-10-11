@@ -22,6 +22,10 @@ using TraversalCoreProje.Models;
 using Extensions = BusinessLayer.Container.Extensions;
 using Microsoft.Extensions.Logging;
 using System.IO;
+using FluentValidation;
+using DTOLayer.DTOs.AnnouncementDTOs;
+using BusinessLayer.ValidationRules;
+using FluentValidation.AspNetCore;
 
 namespace TraversalCoreProje
 {
@@ -50,7 +54,14 @@ namespace TraversalCoreProje
 
 
             services.ContainerDependencies();
-             services.AddControllersWithViews();
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddTransient<IValidator<AnnouncementAddDTOs>, AnnouncementValidator>();
+
+
+
+             services.AddControllersWithViews().AddFluentValidation();
 
             services.AddMvc(config =>
             {

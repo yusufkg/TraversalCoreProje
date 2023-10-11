@@ -9,7 +9,7 @@ namespace DataAccesslayer.Abstract
 {
     public interface IContactUsDal:IGenericDal<ContactUs>
     {
-        List<ContactUs> GetLisContactUsByTrue();
+        List<ContactUs> GetListContactUsByTrue();
         List<ContactUs> GetListContactUsByFalse();
         void ContactUsStatusChangeToFalse(int id);
     }
