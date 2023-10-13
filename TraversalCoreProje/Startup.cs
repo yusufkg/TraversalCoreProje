@@ -57,9 +57,7 @@ namespace TraversalCoreProje
 
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddTransient<IValidator<AnnouncementAddDTOs>, AnnouncementValidator>();
-
-
+            services.CustomerValidator();
 
              services.AddControllersWithViews().AddFluentValidation();
 
