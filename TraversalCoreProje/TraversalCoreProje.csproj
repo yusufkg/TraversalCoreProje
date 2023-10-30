@@ -243,6 +243,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="CQRS\Commands\" />
     <Folder Include="wwwroot\pdfreports\" />
   </ItemGroup>
 
