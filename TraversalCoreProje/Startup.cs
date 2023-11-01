@@ -27,6 +27,7 @@ using DTOLayer.DTOs.AnnouncementDTOs;
 using BusinessLayer.ValidationRules;
 using FluentValidation.AspNetCore;
 using TraversalCoreProje.CQRS.Handlers.DestinationHandlers;
+using MediatR;
 
 namespace TraversalCoreProje
 {
@@ -48,6 +49,7 @@ namespace TraversalCoreProje
             services.AddScoped<RemoveDestinationCommandHandler>();
             services.AddScoped<UpdateDestinationCommandHandler>();
 
+            services.AddMediatR(typeof(Startup));
 
 
             services.AddLogging(x =>
