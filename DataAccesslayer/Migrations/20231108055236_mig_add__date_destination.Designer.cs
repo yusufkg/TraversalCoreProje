@@ -4,14 +4,16 @@ using DataAccesslayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccesslayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20231108055236_mig_add__date_destination")]
+    partial class mig_add__date_destination
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -345,7 +347,7 @@ namespace DataAccesslayer.Migrations
                     b.Property<string>("Detail2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GuideID")
+                    b.Property<int?>("GuideID")
                         .HasColumnType("int");
 
                     b.Property<string>("Image")
@@ -660,9 +662,7 @@ namespace DataAccesslayer.Migrations
                 {
                     b.HasOne("EntityLayer.Concrete.Guide", "Guide")
                         .WithMany("Destinations")
-                        .HasForeignKey("GuideID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GuideID");
 
                     b.Navigation("Guide");
                 });
