@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccesslayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -66,6 +67,11 @@ namespace TraversalCoreProje.Areas.Member.Controllers
             p.Status = "Onay Bekliyor";
             reservartionManager.TAdd(p);
             return View("MyCurrentReservation");
+        }
+        [AllowAnonymous]
+        public IActionResult Deneme()
+        {
+            return View();
         }
 
     }
