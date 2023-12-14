@@ -26,6 +26,7 @@ namespace TraversalCoreProje.Areas.Member.Controllers
             ViewBag.userImage = values.ImageUrl;
             return View();
         }
+        [AllowAnonymous]
         public async Task<IActionResult> MemberDashboard()
         {
             return View();

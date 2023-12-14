@@ -35,6 +35,13 @@
     <None Include="Views\Shared\Components\_DashboardBanner\Default.cshtml" />
     <None Include="Views\Shared\Components\_DestinationStatistic2\Default.cshtml" />
     <None Include="Views\Shared\Components\_DestinationStatistic\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutFooter\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutHeaderContent\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutHead\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutLanguages\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutNavbar\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutSearch\Default.cshtml" />
+    <None Include="Views\Shared\Components\_MemberLayoutSidebar\Default.cshtml" />
     <None Include="Views\Shared\Components\_MemberStatistic\Default.cshtml" />
     <None Include="Views\Shared\Components\_TotalRevenue\Default.cshtml" />
     <None Include="wwwroot\member\.gitignore" />
