@@ -28,6 +28,7 @@ using BusinessLayer.ValidationRules;
 using FluentValidation.AspNetCore;
 using TraversalCoreProje.CQRS.Handlers.DestinationHandlers;
 using MediatR;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace TraversalCoreProje
 {
@@ -73,6 +74,9 @@ namespace TraversalCoreProje
 
              services.AddControllersWithViews().AddFluentValidation();
 
+
+
+
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -80,7 +84,13 @@ namespace TraversalCoreProje
                     .Build();
                     config.Filters.Add(new AuthorizeFilter(policy));
             });
-            services.AddMvc();
+
+            services.AddLocalization(opt =>
+            {
+                opt.ResourcesPath = "Resources";
+            });
+
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
 
 
             services.ConfigureApplicationCookie(options =>
@@ -114,6 +124,13 @@ namespace TraversalCoreProje
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
+
+
+            var suppertedCultures = new[] { "en", "fr", "es", "gr", "tr", "de" };
+            var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(suppertedCultures[1]).AddSupportedCultures(suppertedCultures).AddSupportedUICultures(suppertedCultures);
+
+            app.UseRequestLocalization(localizationOptions);
+
 
             app.UseEndpoints(endpoints =>
             {
